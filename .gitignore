@@ -1,2 +1,16 @@
-node_modules
+node_modules/
+client/node_modules/
+server/node_modules/
+
 .env
+client/.env
+server/.env
+
+# Build çıktıları (Netlify ve Render'ın oluşturacağı dosyalar)
+client/build/
+client/dist/
+.netlify/
+
+# İşletim sistemi dosyaları
+.DS_Store
+Thumbs.db
