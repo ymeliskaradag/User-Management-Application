@@ -64,7 +64,7 @@ exports.getAllUsers = async (req, res) => {
         });
 
     } catch(error){
-        res.status(500).json({message: "Error fetch statistics", error: error.message});
+        res.status(500).json({message: "Error fetching users", error: error.message});
     }
 };
 
@@ -77,7 +77,7 @@ exports.getUserById = async (req, res) => {
         res.json(user);
 
     } catch(error){
-        res.status(500).json({message: "Error fetch statistics", error: error.message});
+        res.status(500).json({message: "Error getting user", error: error.message});
     }
 };
 
@@ -104,7 +104,7 @@ exports.createUser = async (req, res) => {
         res.status(201).json({user, message: "Record has been saved."});
 
     } catch(error){
-        res.status(500).json({message: "Error fetch statistics", error: error.message});
+        res.status(500).json({message: "Error adding user", error: error.message});
     }
 };
 
@@ -127,6 +127,19 @@ exports.updateUser = async (req, res) => {
         res.json(user);
 
     } catch(error){
-        res.status(500).json({message: "Error fetch statistics", error: error.message});
+        res.status(500).json({message: "Error updating user", error: error.message});
+    }
+}
+
+//delete user
+exports.deleteUser = async (req, res) => {
+    try{
+        const user = await User.findByIdAndDelete(req.params.id);
+        if(!user) 
+            return res.status(404).json({message: "User not found."});
+        res.json({message: "User successfully deleted.", success: true});
+
+    } catch(error){
+        res.status(500).json({message: "Error deleting user", error: error.message});
     }
 }
