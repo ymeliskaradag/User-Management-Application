@@ -3,6 +3,7 @@ import {Users} from "lucide-react";
 import {Plus} from 'lucide-react';
 import StatsCard from "./components/StatsCard";
 import SearchBar from "./components/SearchBar";
+import UserTable from "./components/UserTable";
 
 
 function App() {
@@ -34,6 +35,9 @@ function App() {
 
       {/* Search Bar */}
       <SearchBar />
+      
+      {/* User Table */}
+      <UserTable />
     </main>
   </div>;
 }
