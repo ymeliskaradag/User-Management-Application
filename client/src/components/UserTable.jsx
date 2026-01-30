@@ -14,7 +14,7 @@ function UserTable(){
                         <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300">Phone Number</th>
                         <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300">Status</th>
                         <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300">Created</th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300">Action</th>
+                        <th className="px-6 py-4 text-center text-sm font-semibold text-gray-300">Action</th>
                     </tr>
                 </thead>
             
