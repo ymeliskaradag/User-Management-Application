@@ -18,30 +18,30 @@ function UserTable(){
                         </tr>
                     </thead>
                 
-                <tbody className="divide-y divide-gray-800">
-                    <tr className="hover:bg-gray-800 transition-colors">
-                        <td className="px-6 py-4 text-sm text-white font-medium">User Name</td>
-                        <td className="px-6 py-4 text-sm text-white font-medium">Email</td>
-                        <td className="px-6 py-4 text-sm text-white font-medium">Phone</td>
-                        <td className={`px-3 py-1 rounded-full text-xs font-semibold`}>Active</td>
-                        <td className="px-6 py-4 text-sm text-gray-400">Date</td>
-                        <td className="px-6 py-4 text-center">
-                            <div className="flex justify-center gap-2">
-                                <button className="flex items-center gap-1 px-3 py-1.5 text-sm bg-blue-300 text-gray-900 rounded-lg hover:bg-blue-400 
-                                transition-all font-semibold">
-                                <Edit size={14} /> Edit
-                                </button>
-                                <button className="flex items-center gap-1 px-3 py-1.5 text-sm bg-red-500 text-white rounded-lg hover:bg-red-400 
-                                transition-all font-semibold">
-                                <Trash2 size={14} /> Delete
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colSpan={6} className="text-center py-12 text-gray-400">No users found</td>
-                    </tr>
-                </tbody>
+                    <tbody className="divide-y divide-gray-800">
+                        <tr className="hover:bg-gray-800 transition-colors">
+                            <td className="px-6 py-4 text-sm text-white font-medium">User Name</td>
+                            <td className="px-6 py-4 text-sm text-white font-medium">Email</td>
+                            <td className="px-6 py-4 text-sm text-white font-medium">Phone</td>
+                            <td className={`px-3 py-1 rounded-full text-xs font-semibold`}>Active</td>
+                            <td className="px-6 py-4 text-sm text-gray-400">Date</td>
+                            <td className="px-6 py-4 text-center">
+                                <div className="flex justify-center gap-2">
+                                    <button className="flex items-center gap-1 px-3 py-1.5 text-sm bg-blue-300 text-gray-900 rounded-lg hover:bg-blue-400 
+                                    transition-all font-semibold">
+                                    <Edit size={14} /> Edit
+                                    </button>
+                                    <button className="flex items-center gap-1 px-3 py-1.5 text-sm bg-red-500 text-white rounded-lg hover:bg-red-400 
+                                    transition-all font-semibold">
+                                    <Trash2 size={14} /> Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colSpan={6} className="text-center py-12 text-gray-400">No users found</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             {/* Pagination */}
