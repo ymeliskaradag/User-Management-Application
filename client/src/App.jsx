@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {Users} from "lucide-react";
 import {Plus} from 'lucide-react';
 import StatsCard from "./components/StatsCard";
@@ -29,10 +29,77 @@ function App() {
   const [totalPages, setTotalPages] = useState(0);
   const status = ["Active", "Inactive"];
 
+
+  //fetch users
+  useEffect(() => {
+    fetchUsers();
+  }, [currentPage, itemsPerPage]);
+
+  useEffect(() => {
+    if(searchTerm) handleSearch();
+    else fetchUsers();
+  }, [searchTerm]);
+
   //fetch stats
   const fetchStats = async () => {
-    
-  }
+    const data = await getStats();
+    setStats(data);
+  };
+
+  const fetchUsers = async () => {
+    const data = await getUsers(currentPage, itemsPerPage);
+    setUsers(data.users);
+    setTotalPages(data.totalPages);
+    setTotalUsers(data.totalUsers);
+    fetchStats();
+  };
+
+  const handleSearch = async () => {
+    const data = await searchUsers(searchTerm, currentPage, itemsPerPage);
+    setUsers(data.users);
+    setTotalPages(data.totalPages);
+    setTotalUsers(data.totalUsers);
+  };
+
+  const handleSubmit = async () => {
+    if(!formData.name || !formData.email || !formData.phone)
+      return alert("Fill all fields!");
+    setLoading(true);
+
+    try{
+      if(editingItem) await updateUser(editingItem._id, formData);
+      else await addUser(formData);
+      fetchUsers();
+      closeModel();
+    } catch(error){
+      alert(error.message)
+    }
+    setLoading(false);
+  };
+
+  const handleDelete = async (id) => {
+    if(window.confirm("Are you sure?")) {
+      await deleteUser(id);
+      fetchUsers();
+    }
+  };
+
+  const openModel = (item = null) => {
+    if(item){
+      setEditingItem(item);
+      setFormData(item);
+    } else{
+      setEditingItem(null);
+      setFormData({name: "", email: "", phone: "", status: "Active"});
+    }
+    setIsModelOpen(true);
+  };
+
+  const closeModel = () => {
+    setIsModelOpen(false);
+    setEditingItem(null);
+    setFormData({name: "", email: "", phone: "", status: "Active"});
+  };
 
   return (
     <div className="min-h-screen bg-gray-950">
@@ -49,7 +116,7 @@ function App() {
             </div>
           </div>
           <button className="flex items-center gap-2 bg-blue-300 text-gray-900 px-5 py-2.5 rounded-lg hover:bg-blue-400
-          transition-colors shadow-lg font-semibold">
+          transition-colors shadow-lg font-semibold" onClick={() => openModel()}>
             <Plus size={20} /> Add User 
           </button>
         </div>
@@ -68,6 +135,7 @@ function App() {
         <UserTable />
 
         {/*User Model */}
+        <UserModel isOpen={isModalOpen} onClose={closeModel} />
         
       </main>
     </div>
