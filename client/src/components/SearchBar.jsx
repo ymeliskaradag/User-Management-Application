@@ -1,6 +1,5 @@
 import React from "react";
-import {Search} from "lucide-react";
-import {X} from "lucide-react";
+import {Search, X} from "lucide-react";
 
 function SearchBar(){
     return <div className="bg-gray-900 rounded-lg shadow-lg p-4 border border-gray-800 flex flex-col
