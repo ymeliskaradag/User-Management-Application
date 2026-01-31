@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {Users} from "lucide-react";
-import {Plus} from 'lucide-react';
+import {Users, User, Check, X, Plus} from "lucide-react";
 import StatsCard from "./components/StatsCard";
 import SearchBar from "./components/SearchBar";
 import UserTable from "./components/UserTable";
@@ -125,17 +124,40 @@ function App() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {/* Stats */}
-          <StatsCard />
+          <StatsCard title="Total Users" value={{number: stats.total}} icon={<User />} bgIcon="bg-blue-300" iconColor="text-white"
+          gradient="from-blue-600 to-blue-400" />
+          <StatsCard title="Active Users" value={{number: stats.active}} icon={<Check />} bgIcon="bg-green-300" iconColor="text-white"
+          gradient="from-green-600 to-green-400" />
+          <StatsCard title="Inactive Users" value={{number: stats.inactive}} icon={<X />} bgIcon="bg-red-300" iconColor="text-white"
+          gradient="from-red-600 to-red-400" />
         </div>
 
         {/* Search Bar */}
-        <SearchBar />
+        <SearchBar value={searchTerm} onChange={setSearchTerm} onClear={() => {
+            setSearchTerm("");
+            setCurrentPage(1);
+          }} itemsPerPage={itemsPerPage} 
+          onItemsPerPageChange={(val) => {
+            setItemsPerPage(Number(val));
+            setCurrentPage(1);
+          }} 
+          currentPage={currentPage}
+          totalUsers={totalUsers}
+        />
         
         {/* User Table */}
-        <UserTable />
+        <UserTable 
+          users={users} 
+          onEdit={openModel} 
+          onDelete={handleDelete} 
+          currentPage={currentPage} 
+          totalPages={totalPages} 
+          onPageChange={setCurrentPage} 
+        />
 
         {/*User Model */}
-        <UserModel isOpen={isModalOpen} onClose={closeModel} />
+        <UserModel isOpen={isModalOpen} onClose={closeModel} formData={formData} setFormData={setFormData} onSubmit={handleSubmit}
+        loading={loading} status={status}/>
         
       </main>
     </div>
