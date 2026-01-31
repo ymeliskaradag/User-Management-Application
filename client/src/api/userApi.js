@@ -30,8 +30,16 @@ export const addUser = async (data) => {
         headers: {"content-Type": "application/json"},
         body: JSON.stringify(data),
     });
-    if (!res.ok) throw new Error("Failed to add user");
-    return res.json();
+    /* if (!res.ok) throw new Error("Failed to add user");
+    return res.json(); */
+    const result = await res.json(); // Önce gelen JSON verisini (veya hatayı) oku
+
+    if (!res.ok) {
+        // Backend'deki res.status(400).json({message: "..."}) buradaki result.message'dır
+        throw new Error(result.message || "Failed to add user");
+    }
+
+    return result;
 };
 
 //update existing user
@@ -41,8 +49,15 @@ export const updateUser = async (id, data) => {
         headers: {"content-Type": "application/json"},
         body: JSON.stringify(data),
     });
-    if (!res.ok) throw new Error("Failed to update user");
-    return res.json();
+    /* if (!res.ok) throw new Error("Failed to update user");
+    return res.json(); */
+    const result = await res.json();
+
+    if (!res.ok) {
+        throw new Error(result.message || "Failed to update user");
+    }
+
+    return result;
 };
 
 //delete user
@@ -50,6 +65,13 @@ export const deleteUser = async (id) => {
     const res = await fetch(`${API_URL}/${id}`, {
         method: "DELETE"
     });
-    if (!res.ok) throw new Error("Failed to delete user");
-    return res.json();
+    /* if (!res.ok) throw new Error("Failed to delete user");
+    return res.json(); */
+    const result = await res.json();
+
+    if (!res.ok) {
+        throw new Error(result.message || "Failed to delete user");
+    }
+
+    return result;
 };

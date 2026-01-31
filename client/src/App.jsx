@@ -18,7 +18,7 @@ function App() {
     name: "",
     email: "",
     phone: "",
-    status: "active",
+    status: "Active",
   });
 
   const [editingItem, setEditingItem] = useState(null);
