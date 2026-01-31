@@ -7,7 +7,7 @@ function StatsCard({title, value, icon, bgIcon="bg-gray-700", iconColor="text-wh
     return ( 
         <div className={`rounded-lg shadow-lg p-6 border bg-gradient-to-r ${gradient} border-gray-800 transform
         hover:scale-105 transition-all`}>
-            <div className="flex justify-between items-start">
+            <div className="flex justify-between items-center">
                 <div>
                 <p className="text-gray-300 text-sm font-medium">{title}</p>
                 <p className="text-3xl font-bold mt-2" style={{color: value.color || "white"}}>{value.number}</p>
