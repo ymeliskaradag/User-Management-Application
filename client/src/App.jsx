@@ -124,11 +124,11 @@ function App() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {/* Stats */}
-          <StatsCard title="Total Users" value={{number: stats.total}} icon={<User />} bgIcon="bg-blue-300" iconColor="text-white"
+          <StatsCard title="Total Users" value={{number: stats.total}} icon={<User />} bgIcon="bg-blue-300/40" iconColor="text-white"
           gradient="from-blue-600 to-blue-400" />
-          <StatsCard title="Active Users" value={{number: stats.active}} icon={<Check />} bgIcon="bg-green-300" iconColor="text-white"
+          <StatsCard title="Active Users" value={{number: stats.active}} icon={<Check />} bgIcon="bg-green-300/40" iconColor="text-white"
           gradient="from-green-600 to-green-400" />
-          <StatsCard title="Inactive Users" value={{number: stats.inactive}} icon={<X />} bgIcon="bg-red-300" iconColor="text-white"
+          <StatsCard title="Inactive Users" value={{number: stats.inactive}} icon={<X />} bgIcon="bg-red-300/40" iconColor="text-white"
           gradient="from-red-600 to-red-400" />
         </div>
 
