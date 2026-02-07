@@ -1,4 +1,3 @@
-// const API_URL = "http:localhost:5000/api/v2/users";
 const API_URL = "http://localhost:5000/api/v2/users";
 
 
@@ -32,10 +31,9 @@ export const addUser = async (data) => {
     });
     /* if (!res.ok) throw new Error("Failed to add user");
     return res.json(); */
-    const result = await res.json(); // Önce gelen JSON verisini (veya hatayı) oku
+    const result = await res.json(); 
 
     if (!res.ok) {
-        // Backend'deki res.status(400).json({message: "..."}) buradaki result.message'dır
         throw new Error(result.message || "Failed to add user");
     }
 
