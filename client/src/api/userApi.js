@@ -1,5 +1,5 @@
 //const API_URL = "http://localhost:5000/api/v2/users";
-const API_URL = "https://user-management-application-a4uu.onrender.com/api/v2/users";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api/v2/users";
 
 
 //get users with pagination
