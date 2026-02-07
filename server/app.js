@@ -6,7 +6,7 @@ const userRouter = require("./routes/userRoutes");
 
 app.use(cors({
     //for security
-    origin: "https://ymelisk-user-management.netlify.app/" 
+    origin: "https://ymelisk-user-management.netlify.app"
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
