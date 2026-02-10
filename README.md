@@ -6,18 +6,43 @@ A modern, full-stack User Management Application that allows users to perform CR
 [View Live Site](https://ymelisk-user-management.netlify.app)
 
 ## 📸 Screenshots
-<table>
+<!-- <table>
   <tr>
-    <td><img src="screenshots/dashboard.png" alt="Görsel 1" width="100%"></td>
-    <td><img src="screenshots/search.png" alt="Görsel 2" width="100%"></td>
-    <td><img src="screenshots/updated-users.png" alt="Görsel 3" width="100%"></td>
+    <td><img src="screenshots/dashboard.png" alt="Görsel 1" width="200%"></td>
+    <td><img src="screenshots/search.png" alt="Görsel 2" width="200%"></td>
+    <td><img src="screenshots/updated-users.png" alt="Görsel 3" width="200%"></td>
   </tr>
   <tr>
-    <td colspan="1.5"><img src="screenshots/edit-user.png" alt="Görsel 4" width="100%"></td>
-    <td colspan="1.5"><img src="screenshots/add-user.png" alt="Görsel 5" width="100%"></td>
+    <td colspan="1.5"><img src="screenshots/edit-user.png" alt="Görsel 4" width="200%"></td>
+    <td colspan="1.5"><img src="screenshots/add-user.png" alt="Görsel 5" width="200%"></td>
     <td></td> </tr>
+</table> -->
+<table>
+  <tr>
+    <td align="center">
+      <img src="screenshots/dashboard.png" width="100%"><br>
+      <sub>Main Dashboard</sub>
+    </td>
+    <td align="center">
+      <img src="screenshots/add-user.png" width="100%"><br>
+      <sub>Add User Modal</sub>
+    </td>
+    <td align="center">
+      <img src="screenshots/edit-user.png" width="100%"><br>
+      <sub>Edit Details</sub>
+    </td>
+  </tr>
+  <tr>
+    <td></td> <td align="center">
+      <img src="screenshots/search.png" width="100%"><br>
+      <sub>Delete Confirmation</sub>
+    </td>
+    <td align="center">
+      <img src="screenshots/updated-users.png" width="100%"><br>
+      <sub>Search & Filter</sub>
+    </td>
+  </tr>
 </table>
-*Figure 1: Main user listing and management interface.*
 
 ## 🎯 Purpose
 The primary goal of this project is to provide a secure and efficient way to handle user records. It focuses on clean code architecture, seamless API integration, and reliable database management, making it an ideal solution for administrative user control tasks.
