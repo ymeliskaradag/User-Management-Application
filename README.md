@@ -6,7 +6,17 @@ A modern, full-stack User Management Application that allows users to perform CR
 [View Live Site](https://ymelisk-user-management.netlify.app)
 
 ## 📸 Screenshots
-![Main Dashboard](screenshots/dashboard.png)
+<table>
+  <tr>
+    <td><img src="screenshots/dashboard.png" alt="Görsel 1" width="100%"></td>
+    <td><img src="screenshots/search.png" alt="Görsel 2" width="100%"></td>
+    <td><img src="screenshots/updated-users.png" alt="Görsel 3" width="100%"></td>
+  </tr>
+  <tr>
+    <td colspan="1.5"><img src="screenshots/edit-user.png" alt="Görsel 4" width="100%"></td>
+    <td colspan="1.5"><img src="screenshots/add-user.png" alt="Görsel 5" width="100%"></td>
+    <td></td> </tr>
+</table>
 *Figure 1: Main user listing and management interface.*
 
 ## 🎯 Purpose
