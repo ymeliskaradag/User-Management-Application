@@ -6,40 +6,31 @@ A modern, full-stack User Management Application that allows users to perform CR
 [View Live Site](https://ymelisk-user-management.netlify.app)
 
 ## 📸 Screenshots
-<!-- <table>
-  <tr>
-    <td><img src="screenshots/dashboard.png" alt="Görsel 1" width="200%"></td>
-    <td><img src="screenshots/search.png" alt="Görsel 2" width="200%"></td>
-    <td><img src="screenshots/updated-users.png" alt="Görsel 3" width="200%"></td>
-  </tr>
-  <tr>
-    <td colspan="1.5"><img src="screenshots/edit-user.png" alt="Görsel 4" width="200%"></td>
-    <td colspan="1.5"><img src="screenshots/add-user.png" alt="Görsel 5" width="200%"></td>
-    <td></td> </tr>
-</table> -->
-<table>
-  <tr>
-    <td align="center">
-      <img src="screenshots/dashboard.png" width="100%"><br>
+<h2 id="-screenshots">📸 Screenshots</h2>
+
+<table border="0" style="border-collapse: collapse; border: none;">
+  <tr style="border: none;">
+    <td align="center" style="border: none; padding: 10px;">
+      <img src="screenshots/dashboard.png" width="150%"><br>
       <sub>Main Dashboard</sub>
     </td>
-    <td align="center">
-      <img src="screenshots/add-user.png" width="100%"><br>
-      <sub>Add User Modal</sub>
+    <td align="center" style="border: none; padding: 10px;">
+      <img src="screenshots/search.png" width="150%"><br>
+      <sub>Search & Filter</sub>
     </td>
-    <td align="center">
-      <img src="screenshots/edit-user.png" width="100%"><br>
-      <sub>Edit Details</sub>
+    <td align="center" style="border: none; padding: 10px;">
+      <img src="screenshots/updated-users.png" width="150%"><br>
+      <sub>Listing Updated Users</sub>
     </td>
   </tr>
-  <tr>
-    <td></td> <td align="center">
-      <img src="screenshots/search.png" width="100%"><br>
-      <sub>Delete Confirmation</sub>
+  <tr style="border: none;">
+    <td style="border: none;"></td> <td align="center" style="border: none; padding: 10px;">
+      <img src="screenshots/edit-user.png" width="150%"><br>
+      <sub>Editing User</sub>
     </td>
-    <td align="center">
-      <img src="screenshots/updated-users.png" width="100%"><br>
-      <sub>Search & Filter</sub>
+    <td align="center" style="border: none; padding: 10px;">
+      <img src="screenshots/add-user.png" width="150%"><br>
+      <sub>Add User Modal</sub>
     </td>
   </tr>
 </table>
